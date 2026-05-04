@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreOps Demo · CoreEngineStudio</title>
+  <meta name="description" content="CoreOps Dashboard Mockup Demo für CoreEngineStudio Showroom." />
+  <link rel="stylesheet" href="assets/css/coreops.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+    <span class="grid-layer"></span>
+  </div>
+
+  <div class="app-shell" id="appShell">
+    <aside class="sidebar">
+      <div class="brand-card">
+        <div class="brand-mark">CE</div>
+        <div>
+          <p class="eyebrow">CoreEngineStudio</p>
+          <h1>CoreOps</h1>
+          <span>Smart System Showcase</span>
+        </div>
+      </div>
+
+      <div class="path-card">
+        <span>CoreHub://Systems</span>
+        <strong>CoreOps_Demo_V005</strong>
+      </div>
+
+      <nav class="nav" aria-label="CoreOps Navigation">
+        <button class="nav-item active" data-page="overview"><span>◈</span><div><b>Dashboard</b><small>Live Übersicht</small></div></button>
+        <button class="nav-item" data-page="clients"><span>◎</span><div><b>Kunden & Anfragen</b><small>CRM Layer</small></div></button>
+        <button class="nav-item" data-page="tickets"><span>▣</span><div><b>Tickets</b><small>Vorgänge & Status</small></div></button>
+        <button class="nav-item" data-page="calendar"><span>◇</span><div><b>Kalender</b><small>Aufgaben & Follow-ups</small></div></button>
+        <button class="nav-item" data-page="automation"><span>✦</span><div><b>Automationen</b><small>Mails & Logik</small></div></button>
+        <button class="nav-item" data-page="possibilities"><span>⬢</span><div><b>Möglichkeiten</b><small>Technik & Erweiterungen</small></div></button>
+        <button class="nav-item" data-page="admin"><span>⬡</span><div><b>Admin</b><small>Rollen & Rechte</small></div></button>
+      </nav>
+
+      <div class="side-note">
+        <b>Demo-Modus aktiv</b>
+        <p>Fake-Daten, echte Präsentationswirkung. Ideal für Screenshots, Showroom-Karten und Pitch-Szenen.</p>
+        <button class="ghost-btn small side-action" id="sidebarAccessPreviewBtn">Login-Vorschau öffnen</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div class="mobile-brand">
+          <div class="brand-mark small">CE</div>
+          <div><b>CoreOps</b><small>Demo V005</small></div>
+        </div>
+        <div class="title-block">
+          <span id="pageKicker">CoreOps Command Center</span>
+          <h2 id="pageTitle">Dashboard / Übersicht</h2>
+        </div>
+        <div class="top-actions">
+          <div class="search">⌕ <span>Global Search / Fake UI...</span></div>
+          <button class="ghost-btn" id="accessPreviewBtn">Access Preview</button>
+          <button class="primary-btn" id="presentationBtn">Präsentation</button>
+        </div>
+      </header>
+
+      <section class="hero-login" id="heroLogin">
+        <div class="hero-content">
+          <span class="badge green">COREOPS-MOCKUP-005</span>
+          <h2>Eine Systemzentrale, die direkt nach echter Arbeit aussieht.</h2>
+          <p>CoreOps zeigt als Demo, wie CoreEngineStudio interne Portale, Kunden-Dashboards, Ticketlogik, Statusmails und Automationen visuell präsentieren kann.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="enterDemoBtn">Dashboard öffnen</button>
+            <button class="ghost-btn" id="skipHeroBtn">Direkt weiter</button>
+          </div>
+        </div>
+        <div class="login-card">
+          <div class="login-head">
+            <div class="brand-mark">CE</div>
+            <div><b>CoreOps Access</b><span>Showroom Login Preview</span></div>
+          </div>
+          <label>Benutzer</label>
+          <div class="input-fake">info@core-engineeringstudio.de</div>
+          <label>Systemrolle</label>
+          <div class="input-fake">Administrator · Demo Zugriff</div>
+          <div class="login-status"><span></span> Verbindung zur Demo-Shell stabil</div>
+        </div>
+      </section>
+
+      <section class="mode-strip">
+        <div>
+          <span class="eyebrow">System-Modus</span>
+          <b id="activeModeLabel">Dienstleister Portal</b>
+        </div>
+        <div class="mode-buttons">
+          <button class="mode-btn active" data-mode="service">Dienstleister</button>
+          <button class="mode-btn" data-mode="shop">Shop / Store</button>
+          <button class="mode-btn" data-mode="support">Support CRM</button>
+        </div>
+      </section>
+
+      <section class="content-page active" data-view="overview">
+        <div class="metrics-grid">
+          <article class="metric-card"><span>Offene Anfragen</span><strong data-mode-value="requests">18</strong><small>6 mit hoher Priorität</small><div class="meter"><i style="width:72%"></i></div></article>
+          <article class="metric-card"><span>Aktive Tickets</span><strong data-mode-value="tickets">42</strong><small>13 in Bearbeitung</small><div class="meter"><i style="width:56%"></i></div></article>
+          <article class="metric-card"><span>Statusmails</span><strong data-mode-value="mails">128</strong><small>diesen Monat vorbereitet</small><div class="meter"><i style="width:83%"></i></div></article>
+          <article class="metric-card"><span>Automationen</span><strong data-mode-value="autos">9</strong><small>2 Regeln im Testlauf</small><div class="meter"><i style="width:64%"></i></div></article>
+        </div>
+
+        <div class="main-grid">
+          <article class="panel wide">
+            <div class="panel-head"><div><span class="eyebrow">Operations Flow</span><h3>Anfragen & Systemaktivität</h3></div><span class="badge green">Live Demo</span></div>
+            <div class="chart-bars" aria-label="Fake Diagramm">
+              <i style="height:45%"></i><i style="height:70%"></i><i style="height:58%"></i><i style="height:82%"></i><i style="height:66%"></i><i style="height:91%"></i><i style="height:73%"></i><i style="height:87%"></i><i style="height:63%"></i><i style="height:96%"></i><i style="height:76%"></i><i style="height:88%"></i>
+            </div>
+            <div class="mini-stats"><span><b>86%</b> Mail Engine</span><span><b>3.2s</b> Ø Verarbeitung</span><span><b>24</b> Auto-Aktionen</span></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">Timeline</span><h3>Letzte Ereignisse</h3></div></div>
+            <div class="timeline">
+              <div><b>09:42</b><span>Neue Anfrage eingegangen</span><small>Priorität hoch · Service Portal</small></div>
+              <div><b>09:44</b><span>Ticketnummer erzeugt</span><small>REQ-2401 → TCK-782</small></div>
+              <div><b>09:46</b><span>Statusmail vorbereitet</span><small>Template: Eingang bestätigt</small></div>
+              <div><b>09:51</b><span>Follow-up Aufgabe erstellt</span><small>Morgen · 10:00 Uhr</small></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="main-grid lower">
+          <article class="panel table-panel">
+            <div class="panel-head"><div><span class="eyebrow">CRM Layer</span><h3>Aktuelle Anfragen</h3></div><button class="ghost-btn small">Filter</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>ID</th><th>Kunde</th><th>Typ</th><th>Status</th><th>Priorität</th><th>Team</th></tr></thead>
+                <tbody id="requestRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel detail-panel">
+            <div class="panel-head"><div><span class="eyebrow">Detail Preview</span><h3>REQ-2401</h3></div><span class="badge orange">hoch</span></div>
+            <p class="muted">Service-Portal mit Anfrageverwaltung, Statusmails, Ticketnummern und interner Bearbeitung.</p>
+            <div class="detail-list">
+              <div><span>Kunde</span><b>All4You Service München</b></div>
+              <div><span>Status</span><b>neu · Eingang bestätigt</b></div>
+              <div><span>Nächster Schritt</span><b>Angebot prüfen</b></div>
+              <div><span>Team</span><b>CoreOps Team</b></div>
+            </div>
+            <div class="ai-card"><b>CoreOps Vorschlag</b><p>Automatisch eine Folgeaufgabe erstellen und Kundendaten in den CRM Layer übernehmen.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-page" data-view="clients">
+        <div class="page-grid two-one">
+          <article class="panel table-panel full-height">
+            <div class="panel-head"><div><span class="eyebrow">Kundenverwaltung</span><h3>Kunden & Anfragen</h3></div><div class="search compact">⌕ Kunde suchen...</div></div>
+            <div class="client-list" id="clientList"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">Kundenprofil</span><h3>Quick View</h3></div><span class="badge blue">aktiv</span></div>
+            <div class="profile-card">
+              <div class="avatar">A4</div>
+              <h3>All4You Service München</h3>
+              <p>Mehrere Servicebereiche, Anfrage-Wizards, Statuslogik und Mitarbeiterportal.</p>
+            </div>
+            <div class="detail-list"><div><span>Letzter Kontakt</span><b>Heute · 09:42</b></div><div><span>Offene Vorgänge</span><b>4</b></div><div><span>Systemtyp</span><b>Dienstleister Portal</b></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-page" data-view="tickets">
+        <div class="panel-head standalone"><div><span class="eyebrow">Workflow Board</span><h3>Tickets / Vorgänge</h3></div><button class="primary-btn">Neues Ticket</button></div>
+        <div class="kanban" id="kanbanBoard"></div>
+      </section>
+
+      <section class="content-page" data-view="calendar">
+        <article class="panel">
+          <div class="panel-head"><div><span class="eyebrow">Planning</span><h3>Kalender & Follow-ups</h3></div><button class="ghost-btn small">Aufgabe erstellen</button></div>
+          <div class="week-board" id="weekBoard"></div>
+        </article>
+      </section>
+
+      <section class="content-page" data-view="automation">
+        <div class="page-grid two-one">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">Logic Engine</span><h3>Automationen & Statusmails</h3></div><span class="badge green">2 aktiv</span></div>
+            <div class="automation-list" id="automationList"></div>
+          </article>
+          <article class="panel mail-preview">
+            <div class="panel-head"><div><span class="eyebrow">Mail Preview</span><h3>Statusmail</h3></div></div>
+            <div class="mail-card"><small>Von: CoreOps System</small><h3>Ihre Anfrage wurde aktualisiert</h3><p>Hallo, der Status Ihrer Anfrage wurde auf <b>in Bearbeitung</b> gesetzt. Das Team prüft aktuell die nächsten Schritte.</p><span>Ticket: REQ-2401 · Statuslink vorbereitet</span></div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="content-page" data-view="possibilities">
+        <div class="possibility-hero panel">
+          <div>
+            <span class="eyebrow">System-Potenzial</span>
+            <h3>Was ist mit so einem System technisch möglich?</h3>
+            <p>Diese Seite erklärt Kunden auf einen Blick, welche Bausteine, Automationen und Portal-Logiken in ein digitales System integriert werden können. Nicht als trockene Liste, sondern als greifbare Systemübersicht.</p>
+          </div>
+          <div class="possibility-orbit">
+            <span>CRM</span><span>Portal</span><span>Mail</span><span>API</span><b>CoreOps</b>
+          </div>
+        </div>
+
+        <div class="metrics-grid possibility-metrics">
+          <article class="metric-card"><span>Modularten</span><strong>12+</strong><small>Anfragen, Kunden, Tickets, Kalender, Rollen</small><div class="meter"><i style="width:86%"></i></div></article>
+          <article class="metric-card"><span>Automationspunkte</span><strong>8</strong><small>Statusmail, Follow-up, Aufgabe, Erinnerung</small><div class="meter"><i style="width:74%"></i></div></article>
+          <article class="metric-card"><span>Portalrollen</span><strong>4</strong><small>Kunde, Team, Support, Admin</small><div class="meter"><i style="width:62%"></i></div></article>
+          <article class="metric-card"><span>Schnittstellen</span><strong>API</strong><small>E-Mail, Datenbank, Webhooks, Uploads</small><div class="meter"><i style="width:69%"></i></div></article>
+        </div>
+
+        <div class="page-grid two-one possibility-layout">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">Bausteine</span><h3>Mögliche Systemmodule</h3></div><span class="badge green">Showroom erklärbar</span></div>
+            <div class="capability-grid">
+              <div class="capability-card"><b>Anfrage-Assistenten</b><p>Geführte Formulare für Leistungen, Uploads, Kontaktdaten und strukturierte Kundenangaben.</p><span>Anfrage → Ticket</span></div>
+              <div class="capability-card"><b>Kundenportal</b><p>Kunden können Status, Ticketnummer, Rückfragen und Zusammenfassungen nachvollziehen.</p><span>Kunde → Übersicht</span></div>
+              <div class="capability-card"><b>Mitarbeiter-Dashboard</b><p>Interne Ansicht für neue Vorgänge, Zuständigkeiten, Notizen, Aufgaben und Prioritäten.</p><span>Team → Bearbeitung</span></div>
+              <div class="capability-card"><b>Statusmails</b><p>Automatische E-Mails bei Eingang, Statuswechsel, Rückfrage, Termin oder Abschluss.</p><span>System → E-Mail</span></div>
+              <div class="capability-card"><b>Datei-Uploads</b><p>Bilder, PDFs oder Nachweise werden direkt am Vorgang gespeichert und intern sichtbar.</p><span>Upload → Akte</span></div>
+              <div class="capability-card"><b>Rollen & Rechte</b><p>Admins, Manager, Support oder Marketing sehen nur die Bereiche, die sie wirklich brauchen.</p><span>Rechte → Sicherheit</span></div>
+            </div>
+          </article>
+
+          <article class="panel customer-view">
+            <div class="panel-head"><div><span class="eyebrow">User View</span><h3>Was der Kunde sehen kann</h3></div><span class="badge blue">Portal Preview</span></div>
+            <div class="portal-preview-card">
+              <small>Statusportal</small>
+              <h3>Ihre Anfrage ist in Bearbeitung</h3>
+              <p>Ticket REQ-2401 wurde erfasst. Das Team prüft aktuell die Angaben und meldet sich bei Rückfragen.</p>
+              <div class="portal-steps">
+                <span class="done">Anfrage erhalten</span>
+                <span class="active">Prüfung läuft</span>
+                <span>Angebot / Rückmeldung</span>
+              </div>
+            </div>
+            <div class="detail-list compact-list">
+              <div><span>Login möglich</span><b>per E-Mail / Link</b></div>
+              <div><span>Statusprüfung</span><b>Ticketnummer</b></div>
+              <div><span>Rückfragen</span><b>direkt am Vorgang</b></div>
+              <div><span>Dokumente</span><b>Upload / Download</b></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="main-grid lower possibilities-lower">
+          <article class="panel table-panel">
+            <div class="panel-head"><div><span class="eyebrow">Integrationen</span><h3>Technische Erweiterungen</h3></div><button class="ghost-btn small">Fake Filter</button></div>
+            <div class="table-wrap">
+              <table class="integration-table">
+                <thead><tr><th>Bereich</th><th>Was möglich ist</th><th>Nutzen</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>E-Mail</td><td>Bestätigung, Statuswechsel, interne Benachrichtigung</td><td>weniger manuelle Rückfragen</td><td><span class="status-pill green">typisch</span></td></tr>
+                  <tr><td>Datenbank</td><td>Kunden, Anfragen, Historie, Dateien, Rollen</td><td>saubere Verwaltung</td><td><span class="status-pill green">stark</span></td></tr>
+                  <tr><td>Kalender</td><td>Termine, Follow-ups, Erinnerungen, Verfügbarkeiten</td><td>bessere Planung</td><td><span class="status-pill blue">optional</span></td></tr>
+                  <tr><td>KI-Support</td><td>FAQ, Vorqualifizierung, Ticket-Erstellung</td><td>schnellere Ersthilfe</td><td><span class="status-pill orange">erweiterbar</span></td></tr>
+                  <tr><td>Shop / Zahlung</td><td>Produkte, Bestellungen, Checkout, Status</td><td>mehr Automatisierung</td><td><span class="status-pill blue">modular</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel logic-flow-panel">
+            <div class="panel-head"><div><span class="eyebrow">Ablauf</span><h3>Beispiel-Systemlogik</h3></div></div>
+            <div class="logic-flow">
+              <div><b>01</b><span>Kunde sendet Anfrage</span></div>
+              <div><b>02</b><span>System erzeugt Ticket & Kundeneintrag</span></div>
+              <div><b>03</b><span>Statusmail geht automatisch raus</span></div>
+              <div><b>04</b><span>Team sieht Aufgabe im Dashboard</span></div>
+              <div><b>05</b><span>Kunde kann Status später prüfen</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-page" data-view="admin">
+        <div class="page-grid two-one">
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">Access Control</span><h3>Rollen & Berechtigungen</h3></div></div>
+            <div class="role-grid" id="roleGrid"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><span class="eyebrow">System Health</span><h3>Einstellungen</h3></div></div>
+            <div class="health-list"><div><b>2FA empfohlen</b><span>Admin-Konten sollten Zwei-Faktor-Schutz nutzen.</span></div><div><b>Datenbank verbunden</b><span>CRM, Tickets und Historie synchron.</span></div><div><b>Benachrichtigungen aktiv</b><span>Statusmails und Teamhinweise laufen.</span></div><div><b>Performance stabil</b><span>Demo-Shell bereit für Präsentation.</span></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/coreops.js"></script>
+</body>
+</html>
